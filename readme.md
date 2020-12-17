@@ -9,6 +9,12 @@ There are some additional factors that I will asses as well. Please see the para
 - Asses ability to server side render for static and dynamic pages.
 - Asses ability preload, prefetch or support html relation hint attributes.
 
+### repo:
+https://github.com/tomasbulva/spatest
+
+### pure react images as reference:
+![pure-react-image-preload-code](https://github.com/tomasbulva/spatest/blob/main/assets/pure-react-image-preload-code.png)
+![pure-react-image-preload](https://github.com/tomasbulva/spatest/blob/main/assets/pure-react-image-preload.png)
 
 ## nextjs
 it's mature and complete framework. It's arguably the most used by a small and large companies alike. Companies like hulu, netflix, uber, github are using nextjs. Easy to understand and setup as dev environment. It's open source.
@@ -48,6 +54,9 @@ Cons:
 
 ### images:
 ![nextjs-preload](https://github.com/tomasbulva/spatest/blob/main/assets/nextjs-preload.png)
+![nextjs-build-cli-result](https://github.com/tomasbulva/spatest/blob/main/assets/nextjs-build-cli-result.png)
+![nextjs-preload-code](https://github.com/tomasbulva/spatest/blob/main/assets/nextjs-preload-code.png)
+
 
 ## single-SPA
 Single spa also mature framework used by a lot of big and small companies. It's been battle tested. It's build around routing rather then serving. Serving is based on 3rd party components. Is quite opinionated about the way microuis and basic templates should be structured and coded.
@@ -81,6 +90,10 @@ Cons:
 - because of the import maps might not offer best performance?
 - setup is not as straight forward as some other frameworks (import maps may require 3rd server to as deployer).
 
+### images:
+![singlespa-build-optimization](https://github.com/tomasbulva/spatest/blob/main/assets/singlespa-build-optimization.png)
+![singlespa-developerment-serving](https://github.com/tomasbulva/spatest/blob/main/assets/singlespa-developerment-serving.png)
+
 
 ## Tailor
 Is build around the serving files rather then routing. It's a part of larger project (Mosaic)[https://www.mosaic9.org/]. Other parts of this framework are offering two other projects that take care of routing. Created and backed by Zalando (German Company). It's open source.
@@ -108,6 +121,10 @@ Cons:
 - I was not able to preload/prefetch any assets across fragments
 - small community
 
+### images:
+![tailorjs-developement-serving](https://github.com/tomasbulva/spatest/blob/main/assets/tailorjs-developement-serving.png)
+![tailorjs-build](https://github.com/tomasbulva/spatest/blob/main/assets/tailorjs-build.png)
+![tailorjs-preload](https://github.com/tomasbulva/spatest/blob/main/assets/tailorjs-preload.png)
 
 
 ## Riot
@@ -134,6 +151,10 @@ Pros:
 Cons:
   - riotjs is full package not just SPA framework or just router
   - can not be used with our components we would have to re-write components to riotjs
+
+### images:
+![riotjs-build-webpack](https://github.com/tomasbulva/spatest/blob/main/assets/riotjs-build-webpack.png)
+![riotjs-developement-serving](https://github.com/tomasbulva/spatest/blob/main/assets/riotjs-developement-serving.png)
 
 
 ## other possible alternatives:
