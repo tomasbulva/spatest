@@ -17,7 +17,7 @@ https://github.com/tomasbulva/spatest
 ![pure-react-image-preload](https://github.com/tomasbulva/spatest/blob/main/assets/pure-react-image-preload.png)
 
 # nextjs
-it's mature and complete framework. It's arguably the most used by a small and large companies alike. Companies like hulu, netflix, uber, github are using nextjs. Easy to understand and setup as dev environment. It's open source.
+It's mature and complete framework. It's arguably the most used by a small and large companies alike. Companies like hulu, netflix, uber, github are using nextjs. Easy to understand and setup as dev environment. It's open source.
 
 ### features:
 - routing
@@ -42,7 +42,7 @@ Pros:
 - Large community
 - speed produced bundles and served results are very quick
 - architecture seems very compatible with our frontend setup
-- is being directly supported by nxdev (monorepo management tooling)
+- is being directly supported by nx.dev (monorepo management tooling)
 - CLI shows build analysis
 - straight forward setup
 - cool router features
@@ -56,6 +56,7 @@ Cons:
 ![nextjs-preload](https://github.com/tomasbulva/spatest/blob/main/assets/nextjs-preload.png)
 ![nextjs-build-cli-result](https://github.com/tomasbulva/spatest/blob/main/assets/nextjs-build-cli-result.png)
 ![nextjs-preload-code](https://github.com/tomasbulva/spatest/blob/main/assets/nextjs-preload-code.png)
+![nextjs-developement-serving](https://github.com/tomasbulva/spatest/blob/main/assets/nextjs-developement-serving.png)
 
 
 # single-SPA
@@ -63,11 +64,11 @@ Single spa also mature framework used by a lot of big and small companies. It's 
 
 ### features:
 - routing
-    - supports dynamic and static as well as layout routing
-    - supports lazy loading for routes
+  - supports dynamic and static as well as layout routing
+  - supports lazy loading for routes
 
 - pre-rendering
-    - suports SSR - server side rendering
+  - suports SSR - server side rendering
 
 - misc
     - supports a large number of frameworks, including webcomponents
@@ -117,7 +118,7 @@ Pros:
 
 Cons:
 - I don't think it would be possible to use with import-maps (tailor is solving similar issue)
-- no native CLI instead is using Lerna to help orchestrate microui-microservices
+- no native CLI instead is using Lerna to help orchestrate microui as microservices
 - I was not able to preload/prefetch any assets across fragments
 - small community
 
@@ -128,7 +129,7 @@ Cons:
 
 
 # Riot
-complete modular suite, focused on building riot component module that features RCM injector, css scoping and more because of this, Riot is more than just opinionated, it is closed ecosystem. (Examples)[https://riot.js.org/made-with-riot/].
+Complete modular suite, focused on building riot component module that features RCM injector, css scoping and more because of this, Riot is more than just opinionated, it is closed ecosystem. (Examples)[https://riot.js.org/made-with-riot/].
 
 - routing
   - suports general static and dynamic routing (nodejs/express style)
