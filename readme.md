@@ -1,55 +1,58 @@
-#SPA framework
-Main focus of this SPIKE is to re-search static assets preload capabilities.
-There are some additional factors that I will asses as well. Please see the requirements section.
+# SPA frameworks
+Main focus of this SPIKE is to research static assets preload capabilities.
+There are some additional factors that I will asses as well. Please see the parameters section. The order of frameworks here is as it was ordered in my story. Does not express preference or score. I have tried to asses the abilities of the frameworks as unbiased as possible.
 
-###Requirements:
-Should be able route between the pages and inside the page as well as give API to allow for our components and microuis to direct the routing (Nested Dynamic Routing). Should be able to work with our microuis with minimal modifications.
-Should offer server side rendering for static and dynamic pages.
-Preload/Prefetch: be able to at least support html relation hint attributes.
+### SPIKE parameters:
+- Asses ability to route between the pages statically and dynamically.
+- Layout routing static as well as dynamic as well as ability to route across components nested layouts (Nested Dynamic Routing).
+- Asses ability to work with our microuis ideally with minimal or no modifications.
+- Asses ability to server side render for static and dynamic pages.
+- Asses ability preload, prefetch or support html relation hint attributes.
 
 
+## nextjs
+it's mature and complete framework. It's arguably the most used by a small and large companies alike. Companies like hulu, netflix, uber, github are using nextjs. Easy to understand and setup as dev environment. It's open source.
 
-##nextjs
-easy to understand and configure.
-It would fit well with our existing architecture. It's open source.
-
-https://www.npmjs.com/package/next-router
-
+### features:
 - routing
-    - no routing file required for static and dynamic routing (using filename tokes/posts/[id].js),
-      routing is based on physical structure of the files.
-    - dynamic routing nodejs/express for the handler logic, supports middleware
+  - no routing setup required for basic routing (using filename tokes/posts/[id].js),
+    routing is based on physical structure of the files.
+  - dynamic routing nodejs/express for the handler logic, supports middleware
 
 - pre-rendering
-    - supports static and dynamic pre-rendering
-    - static is by default when there is no data to be fetched
-    - support for static props pre-rendering
-    - react hook to fetch data on the client side. It handles caching, revalidation, focus tracking, refetching on interval, and more.
-- misc
-    - direct support for monorepo and microuis as well as typescript
-    - has a nxdev plugin to support deployments
+  - supports static and dynamic pre-rendering
+  - static is by default when there is no data to be fetched
+  - support for static props pre-rendering
+  - react hook to fetch data on the client side. It handles caching, revalidation, focus tracking, refetching on interval, and more.
 
-###summary:
-Has very cool build cli that will report the what features are being recognized in build (SSR, Incremental Static Regeneration, Static props preload, server side render at runtime) It also reports what components contain what features.
+- misc
+  - direct support for monorepo and microuis as well as typescript
+  - has a nxdev plugin to support deployments
+
+### summary:
+Has very nice cli that makes this a developer experience. It has smooth CLI init flow as well as build flow that reports what features are being recognised in build: SSR, Incremental Static Regeneration, Static props preload, server side render at runtime. As well as all other features. It also reports what components contain what features.
 
 Pros:
 - Large community
-- automated static analysis
-- speed
-- opinionated in right direction
+- speed produced bundles and served results are very quick
+- architecture seems very compatible with our frontend setup
+- is being directly supported by nxdev (monorepo management tooling)
 - CLI shows build analysis
 - straight forward setup
+- cool router features
 - Nested Dynamic layouts are possible (using next router)[https://reacttricks.com/nested-dynamic-layouts-in-next-apps/]
 
 Cons:
-- opinionated
 - requires code changes to take advantage of some features
+- because of the complete ecosystem it might impose psychological lock-in
 
+### images:
+![nextjs-preload](https://github.com/tomasbulva/spatest/blob/main/assets/nextjs-preload.png)
 
-##single-SPA
-Single spa all based on routing. Serving the pages is secondary.
-Is quite opinionated about the way microuis and basic templates should be structured and coded.
+## single-SPA
+Single spa also mature framework used by a lot of big and small companies. It's been battle tested. It's build around routing rather then serving. Serving is based on 3rd party components. Is quite opinionated about the way microuis and basic templates should be structured and coded.
 
+### features:
 - routing
     - supports dynamic and static as well as layout routing
     - supports lazy loading for routes
@@ -60,34 +63,39 @@ Is quite opinionated about the way microuis and basic templates should be struct
 - misc
     - supports a large number of frameworks, including webcomponents
 
-###summary:
+### summary:
 Main feature of single-spa is routing with mounting and un-maunting microuis.
 This requires some changes in components that are getting routed to (mainly adding the mount unmount bootstrap hooks).
 Has CLI that helps with converting components. On it's own it doesn't support anything else than routing. Featured import-maps are standalone project that can be used independently.
 
 Pros:
 - large community
-- buildin support for layout and page routing
-- buildin import maps
-- good CLI
+- build-in support for layout and page routing
+- build-in import maps
+- import maps that offer excellent developer experience
+- nice CLI
 
 Cons:
-- it's just router attached to import maps it feels a bit too eclectic.
+- doesn't offer optimisations or even analysis of the performance.
+- it's just router attached to import maps it feels a bit eclectic.
+- because of the import maps might not offer best performance?
+- setup is not as straight forward as some other frameworks (import maps may require 3rd server to as deployer).
 
 
-##Tailor
-minimalistic, basic, nodejs/express based. Tailor is more a server than router.
+## Tailor
+Is build around the serving files rather then routing. It's a part of larger project (Mosaic)[https://www.mosaic9.org/]. Other parts of this framework are offering two other projects that take care of routing. Created and backed by Zalando (German Company). It's open source.
 
-  - routing
-    - supports layout routing via html templates composing fragments
-    - routing fault tolerance
-    - performance budgeting
+### features:
+- routing
+  - supports layout routing via html templates composing fragments
+  - routing fault tolerance
+  - performance budgeting
 
-  - pre-rendering
-    - supports ssr pre-rendering
+- pre-rendering
+  - supports ssr pre-rendering
 
-###summary:
-Very interesting take on microui. It's mission is to bring the microservices experience to the backend. It's a part of larger project (Mosaic)[https://www.mosaic9.org/]. Created and backed by Zalando (German Company). It's open source.
+### summary:
+Very interesting take on microui SPA framework. It's mission is to bring the microservices experience to the backend.
 
 Pros:
 - extremely modular and resilient
@@ -98,28 +106,36 @@ Cons:
 - I don't think it would be possible to use with import-maps (tailor is solving similar issue)
 - no native CLI instead is using Lerna to help orchestrate microui-microservices
 - I was not able to preload/prefetch any assets across fragments
+- small community
 
 
 
-##Riot
-complete modular suite, focused on building riot component module that features RCM injector, css scoping and more
-because of this, Riot is very opinionated.
+## Riot
+complete modular suite, focused on building riot component module that features RCM injector, css scoping and more because of this, Riot is more than just opinionated, it is closed ecosystem. (Examples)[https://riot.js.org/made-with-riot/].
 
-  - routing
-    - suports general static and dynamic routing (nodejs/express style)
-    - supports layout routing via markup (static and dynamic)
-    - supports lazy loading
+- routing
+  - suports general static and dynamic routing (nodejs/express style)
+  - supports layout routing via markup (static and dynamic)
+  - supports lazy loading
 
-  - pre-rendering
-    - supports ssr
+- pre-rendering
+  - supports ssr
+
+### summary:
+Riotjs is focused on it's own ecosystem. Using it's own components framework syntax of which is similar in appearance to VUE components. Using it's own router, own server and so on. It's pretty closed system. But because of this it offers very good performance.
 
 Pros:
-  - supports Nested dynamic routing (https://gist.github.com/virtuald/ac2fabcc37aeb00ecfe7a94e29035c72)
+  - supports Nested dynamic routing via native router
+  - lean libraries
+  - very good performance
+  - all in one solution
+  - open source
+
 Cons:
-  - opinionated forcing to use it's own tag/router/
+  - riotjs is full package not just SPA framework or just router
+  - can not be used with our components we would have to re-write components to riotjs
 
 
-##other possible alternatives:
+## other possible alternatives:
 - Gatsby - Complete ecosystem, including plugins and deployment cloud.
-  Doesn't seem to fit our requirements.
 - Nuxtjs - like nextjs but for VUE
