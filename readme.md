@@ -16,7 +16,7 @@ https://github.com/tomasbulva/spatest
 ![pure-react-image-preload-code](https://github.com/tomasbulva/spatest/blob/main/assets/pure-react-image-preload-code.png)
 ![pure-react-image-preload](https://github.com/tomasbulva/spatest/blob/main/assets/pure-react-image-preload.png)
 
-## nextjs
+# nextjs
 it's mature and complete framework. It's arguably the most used by a small and large companies alike. Companies like hulu, netflix, uber, github are using nextjs. Easy to understand and setup as dev environment. It's open source.
 
 ### features:
@@ -58,7 +58,7 @@ Cons:
 ![nextjs-preload-code](https://github.com/tomasbulva/spatest/blob/main/assets/nextjs-preload-code.png)
 
 
-## single-SPA
+# single-SPA
 Single spa also mature framework used by a lot of big and small companies. It's been battle tested. It's build around routing rather then serving. Serving is based on 3rd party components. Is quite opinionated about the way microuis and basic templates should be structured and coded.
 
 ### features:
@@ -95,7 +95,7 @@ Cons:
 ![singlespa-developerment-serving](https://github.com/tomasbulva/spatest/blob/main/assets/singlespa-developerment-serving.png)
 
 
-## Tailor
+# Tailor
 Is build around the serving files rather then routing. It's a part of larger project (Mosaic)[https://www.mosaic9.org/]. Other parts of this framework are offering two other projects that take care of routing. Created and backed by Zalando (German Company). It's open source.
 
 ### features:
@@ -127,7 +127,7 @@ Cons:
 ![tailorjs-preload](https://github.com/tomasbulva/spatest/blob/main/assets/tailorjs-preload.png)
 
 
-## Riot
+# Riot
 complete modular suite, focused on building riot component module that features RCM injector, css scoping and more because of this, Riot is more than just opinionated, it is closed ecosystem. (Examples)[https://riot.js.org/made-with-riot/].
 
 - routing
