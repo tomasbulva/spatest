@@ -1,13 +1,13 @@
 # SPA frameworks
 Main focus of this SPIKE is to research static assets preload capabilities.
-There are some additional factors that I will asses as well. Please see the parameters section. The order of frameworks here is as it was ordered in my story. Does not express preference or score. I have tried to asses the abilities of the frameworks as unbiased as possible.
+There are some additional factors that I will assess as well. Please see the parameters section. The order of frameworks here is as it was ordered in my story. Does not express preference or score. I have tried to assess the abilities of the frameworks as unbiased as possible.
 
 ### SPIKE parameters:
-- Asses ability to route between the pages statically and dynamically.
+- Assess ability to route between the pages statically and dynamically.
 - Layout routing static as well as dynamic as well as ability to route across components nested layouts (Nested Dynamic Routing).
-- Asses ability to work with our microuis ideally with minimal or no modifications.
-- Asses ability to server side render for static and dynamic pages.
-- Asses ability preload, prefetch or support html relation hint attributes.
+- Assess ability to work with our microuis ideally with minimal or no modifications.
+- Assess ability to server side render for static and dynamic pages.
+- Assess ability preload, prefetch or support html relation hint attributes.
 
 ### repo:
 https://github.com/tomasbulva/spatest
