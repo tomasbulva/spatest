@@ -1,0 +1,27 @@
+{
+  "name": "fragment-common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "start": "node fragment.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "webpack": "3.11.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^5.2.0",
+    "redux": "^3.7.2"
+  }
+}

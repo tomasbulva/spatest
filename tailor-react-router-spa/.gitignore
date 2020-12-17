@@ -1,0 +1,6 @@
+/node_modules
+/packages/fragment-chat/node_modules
+/packages/fragment-common/node_modules
+/packages/fragment-contacts/node_modules
+/packages/fragment-catalogs/node_modules
+/packages/fragment-page/node_modules
