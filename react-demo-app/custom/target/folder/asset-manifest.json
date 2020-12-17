@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c3ae4529.css",
+    "main.js": "/custom-bundle-name.js",
+    "main.js.map": "/custom-bundle-name.js.map",
+    "custom-bundle-name.js.LICENSE.txt": "/custom-bundle-name.js.LICENSE.txt",
+    "index.html": "/index.html",
+    "static/css/main.c3ae4529.css.map": "/static/css/main.c3ae4529.css.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3ae4529.css",
+    "custom-bundle-name.js"
+  ]
+}
