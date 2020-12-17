@@ -74,7 +74,7 @@ Single spa also mature framework used by a lot of big and small companies. It's 
     - supports a large number of frameworks, including webcomponents
 
 ### summary:
-Main feature of single-spa is routing with mounting and un-maunting microuis.
+Main feature of single-spa is routing with mounting and unmaunting microuis.
 This requires some changes in components that are getting routed to (mainly adding the mount unmount bootstrap hooks).
 Has CLI that helps with converting components. On it's own it doesn't support anything else than routing. Featured import-maps are standalone project that can be used independently.
 
